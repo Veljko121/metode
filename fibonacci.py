@@ -12,11 +12,11 @@ def fibonacci_method(f, a, b, max_error = 0.01):
     while abs(b - a)/max_error > fibonacci(n):
         n += 1
     
-    x1 = a + fibonacci(n - 2)/fibonacci(n)*(b - a)
+    x1 = a + fibonacci(n - 2)/fibonacci(n) * (b - a)
     x2 = a + b - x1
 
     for _ in range(2, n + 1):
-        if f(x1) <= f(x2):
+        if f(x1) < f(x2):
             b = x2
             x2 = x1
             x1 = a + b - x2
