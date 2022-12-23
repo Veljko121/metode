@@ -2,14 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def secica(f, df, x0, x1, max_error = 0.01, max_steps = 1000):
+def secica(df, x0, x1, max_error = 0.01, max_steps = 1000):
     for steps in range(max_steps):
-        x2 = x0 - df(x0)*(x0 - x1)/(df(x0) - df(x1))
-        if abs(x2 - x1) < max_error:
+        x = x0 - df(x0)*(x0 - x1)/(df(x0) - df(x1))
+        if abs(x - x1) < max_error:
             break
         x0 = x1
-        x1 = x2
-    return x2, f(x2), steps
+        x1 = x
+    return x, steps
 
 # PRIMER UPOTREBE
 
@@ -20,7 +20,8 @@ def secica(f, df, x0, x1, max_error = 0.01, max_steps = 1000):
 #     x0 = -1
 #     x1 = 1
 #     tol = 1e-2
-#     x_min, y_min, steps = secica(f, df, x0, x1, tol)
+#     x_min, steps = secica(f, df, x0, x1, tol)
+#     y_min = f(x_min)
 #     print(f"x_min = {x_min}")
 #     print(f"y_min = {y_min}")
 #     print(f"steps = {steps}")
