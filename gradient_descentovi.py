@@ -64,7 +64,7 @@ def adam(gradf, x0, gamma = 0.1, omega1 = 0.1, omega2 = 0.1, epsilon1 = 0.1, max
 # PRIMER UPOTREBE
 
 # f = lambda x: x[0]**2 + x[1]**2
-# df = lambda x: np.array([2*x[0], 2*x[1]])
+# gradf = lambda x: np.array([2*x[0], 2*x[1]])
 
 # def main():
 #     x0 = np.array([2, 5])
