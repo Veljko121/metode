@@ -1,0 +1,8 @@
+NAPOMENA: Ovo sam uradio na brzinu, fale detalji
+
+cestice = generate_cestice
+for iter in max_iter
+    evaluate_cestice
+    update_personal_bests
+    update_global_best
+    update_positions

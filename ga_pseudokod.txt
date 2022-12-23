@@ -1,0 +1,10 @@
+NAPOMENA: Ovo sam uradio na brzinu, fale detalji
+
+jedinke = generate_jedinke
+for iter in max_iter
+    rank_jedinke
+    children = crossover
+    jedinke = combine_parents_children
+    jedinke = mutate_jedinke
+    if converge(jedinke)
+        breaks
